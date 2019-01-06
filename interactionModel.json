@@ -1,0 +1,298 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "movie scene game",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "end scene"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "exit",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": [
+                        "home"
+                    ]
+                },
+                {
+                    "name": "MovieScene",
+                    "slots": [
+                        {
+                            "name": "movie",
+                            "type": "MyMovies",
+                            "samples": [
+                                "{movie}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{movie}"
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "slots": [],
+                    "samples": [
+                        "action"
+                    ]
+                },
+                {
+                    "name": "UserLine",
+                    "slots": [
+                        {
+                            "name": "line",
+                            "type": "Lines"
+                        }
+                    ],
+                    "samples": [
+                        "{line}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Lines",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "your friends wouldn't mind cause they look up to us"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "you're so conceited claire you're so conceited you're so like full of yourself why are you like that"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "i'm not saying that to be conceited. i hate it. i hate having to go along with everything my friends say"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "so then why do you do it"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "i don't know. i don't. You don't understand."
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "excuse me. who are you?"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rubeus hagrid keeper of keys and grounds at hogwarts of course you know all about hogwarts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sorry, no."
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "no blimey harry didn't you ever wonder where your mom and dad learned it all"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "learned what?"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "you're a wizard harry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "i'm a what?"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "a wizard and a thumping good one i'd wager once you train up a little"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "No. You've made a mistake. I can't be a a wizard. I mean, I'm just Harry. Just Harry."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MyMovies",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Harry Potter and the Sorcerer's Stone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Breakfast Club"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "MovieScene",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "movie",
+                            "type": "MyMovies",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.821238063923.1018322306894"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "UserLine",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "line",
+                            "type": "Lines",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Slot.Validation.483843487620.571072810848.1412286409736",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I haven't seen that yet. We all don't have the luxury of free time like you. Pick one I know."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.792183168035.440885189366",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Sounds fun. What movie do you want to do?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which movie should we reenact?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Ok. Pick a movie."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.255884731123.588259351321",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "say action"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.804683874300.410994453961.542240514175",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I don't know that movie."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.933454417570.1414180210535",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What movie would you like to do?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.933454417570.1265619721829",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "say action"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.761392038603.1078708060726.1002147385397",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "wrong"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.821238063923.1018322306894",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which movie?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.821238063923.63898630522",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Say action"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.134172840857.1143095068975",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Say your line"
+                    }
+                ]
+            }
+        ]
+    }
+}
